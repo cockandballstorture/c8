@@ -3,6 +3,9 @@
 #include <string.h>
 #include <time.h>
 void main(){
+    clock_t begin, end;
+    double time_spent;
+    begin = clock();
     const int n = 200;
     const int m = 200;
     const int p = 700;
@@ -10,9 +13,6 @@ void main(){
     int i,j,k;
     int ****a;
     a=(int****)malloc(m*sizeof(int***));
-    clock_t begin, end;
-    double time_spent;
-    begin = clock();
     srand(time(NULL));
 for (i = 0; i < n; i++) {
     a[i]=(int***)malloc(n*sizeof(int**));
