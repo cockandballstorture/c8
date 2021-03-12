@@ -6,10 +6,10 @@ void main(){
     clock_t begin, end;
     double time_spent;
     begin = clock();
-    const int m = 200;
-    const int n = 200;
-    const int p = 700;
-    const int q = 200;
+    const int m = 20;
+    const int n = 20;
+    const int p = 70;
+    const int q = 20;
     int i,j,k,w;
     int ****a;
     a=(int****)malloc(m*sizeof(int***));
@@ -33,7 +33,9 @@ for (i = 0; i < m; i++) {
     }
 }
 for (i = 0; i < n; i++) {
+    free(a[i]);
     for (j=0;j<m;j++){
+        free(a[i][j]);
         for (k=0;k<p;k++){
             free(a[i][j][k]);
         }
